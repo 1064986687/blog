@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>contact</title>
+<link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="css/svwp_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+        function getMailtoUrl() {
+            var args = [];
+            if (typeof subject !== 'undefined') {
+                args.push('subject=' + encodeURIComponent('主题内容'));
+            }
+            var name = $("input[name='author']").val();
+            var iphone = $("input[name='phone']").val();
+            var body = name +"\n"+iphone
+            if (typeof body !== 'undefined') {
+                args.push('body=' + encodeURIComponent(body))
+            }
+    
+            var url = 'mailto:' + encodeURIComponent('1064986687@qq.com');
+            if (args.length > 0) {
+                url += '?' + args.join('&');
+            }
+            console.log(url);
+            window.location = url;
+            return url;
+        }
+    </script>
+</head>
+<body>
+<div id="templatemo_top_wrapper">
+	<div id="templatemo_top">
+    	<ul id="social_box">
+            <li><a href="#"><img src="images/facebook.png" alt="facebook" /></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt="twitter" /></a></li>
+            <li><a href="#"><img src="images/linkedin.png" alt="linkin" /></a></li>
+            <li><a href="#"><img src="images/technorati.png" alt="technorati" /></a></li>
+            <li><a href="#"><img src="images/myspace.png" alt="myspace" /></a></li>                
+        </ul>
+    </div>
+</div>
+
+<div id="templatemo_header_wrapper">
+	<div id="templatemo_header">
+    
+    	<div id="site_title">
+            <h1><a href="index.html"><img src="images/templatemo_logo.png" alt="logo" /><span>展示自我 乐于分享 ———— 李青伟</span></a></h1>
+        </div> <!-- end of site_title -->
+        
+    </div>
+</div> <!-- end of templatemo_header -->
+
+<div id="templatemo_menu_wrapper">
+	<div id="templatemo_menu">
+        <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="#myDesign">创作</a></li>
+                <li><a href="contact.html" class="current">联系我</a></li>
+        </ul>    	
+    </div> <!-- end of templatemo_menu -->
+</div>
+
+<div id="templatemo_middle_wrapper_outer">
+<div id="templatemo_middle_wrapper_inner">
+	<div id="templatemo_middle_top"></div>
+	<div id="templatemo_middle">
+    
+    	<div id="templatemo_content">
+        	
+            <h2>联系我</h2>
+
+                    <p>欢迎来到我的博客，希望你在这里已经获得你想要的资源，你的留言或建议能对我有很大帮助，我也会及时给您反馈哟，我相信我们的交流能让大家都能进步，Thank you！ </p>
+                    <div class="cleaner_h40"></div>
+        
+           
+                    <div id="contact_form">
+                
+                        <h3>请给我留言</h3>
+                        
+                        <form method="get" name="contact" action="mailto:1064986687@qq.com" enctype="text/plain">
+                        
+                        <div class="col_w310 float_l">
+
+                            <label for="author">姓名:</label> <input type="text" id="author" name="author" class="required" />
+                            <div class="cleaner_h10"></div>
+                            
+                            <label for="email">邮箱:</label> <input type="text" id="email" name="email" class="validate-email required" />
+                            <div class="cleaner_h10"></div>
+                            
+                            <label for="phone">电话:</label> <input type="text" name="phone" id="phone" />
+                            <div class="cleaner_h10"></div>
+                        </div>
+                        
+                        <div class="col_w310 float_r">
+                            <label for="text">留言:</label> <textarea id="text" name="text" rows="0" cols="0" class="required"></textarea>
+                            <div class="cleaner_h10"></div>
+                            
+                            <input type="submit" class="submit_btn float_l" name="submit" id="submit" value="Send" onclick="getMailtoUrl()" />
+                            <input type="reset" class="submit_btn float_r" name="reset" id="reset" value="Reset" />
+                        </div>
+                        
+                        </form>
+        
+                    </div> 
+            		<div class="cleaner"></div>	
+            
+        
+        </div> <!-- end of content -->
+        <div id="templatmeo_sidebar">
+                
+                <div class="sidebar_box">
+                    <ul class="ads_125">
+                        <li><a href="#"><img src="images/templatemo_ads.jpg" alt="CSS Templates" /></a></li>
+                        <li class="odd"><a href="#"><img src="images/templatemo_ads.jpg" alt="banner" /></a></li>
+                        <li class="last_row"><a href="http://www.cssmoban.com/"><img src="images/templatemo_ads.jpg" alt="banner" /></a></li>
+                        <li class="odd last_row"><a href="#"><img src="images/templatemo_ads.jpg" alt="banner" /></a></li>
+                    </ul>  
+                    <div class="cleaner"></div>
+                </div>              
+                
+                <div class="sidebar_box">
+                    <h4>类别</h4>
+                    <ul class="tmo_list">
+                            <li><a href="index.html">扁平化设计</a></li>
+                            <li><a href="index.html">极简风格</a></li>
+                            <li><a href="index.html">3D风格</a></li>
+                            <li><a href="index.html">无边框风格</a></li>
+                            <li><a href="index.html">插画风格</a></li>
+                            <li><a href="index.html">黑板风格</a></li>
+                            <li><a href="index.html">纵向分割</a></li>
+                            <li><a href="index.html">超级头版</a></li>
+                            <li><a href="index.html">照片与白字搭配</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar_box" id="myDesign">
+                    <h4>最近设计</h4>
+                    <div class="recent_comment_box">
+                        <a href="3DHeart.html">3DHeart</a>
+                        <p>div+css来实现你的旋转小爱心<br> <a href="#" rel="nofollow"><strong>HTML code</strong></a> &amp; <a href="#" rel="nofollow"><strong>CSS code</strong></a>.</p>
+                    </div>
+                    
+                    <div class="recent_comment_box">
+                        <a href="canvasgame.html">canvas小游戏 </a>
+                        <p>闲暇时光来一波 <br><a href="#" rel="nofollow"><strong>HTML code</strong></a> &amp; <a href="#" rel="nofollow"><strong>CSS code</strong></a>.</p>
+                  </div>
+                    
+                    <div class="recent_comment_box">
+                        <a href="3Dphotos.html">3D相册</a>
+                        <p> 把你喜欢的photos做成自己喜欢的相册吧<br> <a href="#" rel="nofollow"><strong>HTML code</strong></a> &amp; <a href="#" rel="nofollow"><strong>CSS code</strong></a>.</p>
+                    </div>
+                    
+                    <div class="recent_comment_box">
+                        <a href="#">jQuery动画</a>
+                        <p>感受一下吧.</p>
+                    </div>
+                    
+                </div>
+                <div class="cleaner"></div>
+            
+            </div>
+           
+            <div class="cleaner"></div>
+        </div> <!-- end of templatemo_middle -->
+        <div id="templatemo_middle_bottom"></div>
+    
+        <div id="templatemo_footer">
+        
+            <div class="col_w310">
+                <h4>页面导航</h4>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于</a></li>
+                    <li><a href="#myDesign">设计</a></li>
+                    <li><a href="contact.html" class="last">联系我</a></li>
+                </ul>  
+     
+            </div>
+            
+            <div class="col_w310">
+                <h4>资源集锦</h4>
+                <ul>
+                    <li><a href="http://www.cssmoban.com/">CSS模板</a></li>
+                    <li><a href="http://www.brusheezy.com/brush/1327-Midnight-City-Vector-Brushes">矢量画笔</a></li>
+                    <li><a href="http://jwloh.deviantart.com/art/Aquaticus-Social-91014249">各类图标</a></li>
+                    <li><a href="http://www.sj33.cn/digital/wysj/">网页设计</a></li>
+                </ul>    
+     
+            </div>
+            
+            <div class="col_w310">
+                <h4>寄语</h4>
+                <p>感谢大家能访问我的博客，希望大家能在这里学到更多知识，找到更多自己想要的资源，也可以<a href="contact.html">联系我</a></p>
+                <div class="btn_more"><a href="about.html">更多 <span>&raquo;</span></a></div>
+     
+            </div>
+            
+            
+            <div class="cleaner"></div>
+        </div> <!-- end of footer -->
+        
+    </div>
+    </div>
+    
+    <div id="templatemo_copyright_wrapper">
+        <div id="templatemo_copyright">
+        
+            Copyright © 2018 <a href="#">李青伟</a> - 
+            更多 <a href="http://js.itivy.com" target="_parent" title="网页素材">网页素材</a>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
