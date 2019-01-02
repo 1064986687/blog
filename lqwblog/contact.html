@@ -6,7 +6,7 @@
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 <link href="css/svwp_style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
-        function getMailtoUrl() {
+        /*function getMailtoUrl() {
             var args = [];
             if (typeof subject !== 'undefined') {
                 args.push('subject=' + encodeURIComponent('主题内容'));
@@ -25,7 +25,7 @@
             console.log(url);
             window.location = url;
             return url;
-        }
+        }*/
     </script>
 </head>
 <body>
@@ -79,7 +79,7 @@
                 
                         <h3>请给我留言</h3>
                         
-                        <form method="get" name="contact" action="mailto:1064986687@qq.com" enctype="text/plain">
+                        <form method="POST" name="contact" action="mailto:1064986687@qq.com" enctype="text/plain">
                         
                         <div class="col_w310 float_l">
 
@@ -97,7 +97,7 @@
                             <label for="text">留言:</label> <textarea id="text" name="text" rows="0" cols="0" class="required"></textarea>
                             <div class="cleaner_h10"></div>
                             
-                            <input type="submit" class="submit_btn float_l" name="submit" id="submit" value="Send" onclick="getMailtoUrl()" />
+                            <input type="submit" class="submit_btn float_l" name="submit" id="submit" value="Send" />
                             <input type="reset" class="submit_btn float_r" name="reset" id="reset" value="Reset" />
                         </div>
                         
