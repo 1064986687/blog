@@ -1,234 +1,241 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>lqwBlog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
-    <link href="css/svwp_style.css" rel="stylesheet" type="text/css" />
-    
-    <script src="js/jquery-1.3.2.min.js" type="text/javascript"></script>
-    <script src="js/jquery.slideViewerPro.1.0.js" type="text/javascript"></script>
-    <script src="js/jquery.timers.js" type="text/javascript"></script>
-    
-    <!--
-    <script src="//www.w3cschool.cn/statics/assets/react/react.min.js"></script>
-    <script src="//www.w3cschool.cn/statics/assets/react/react-dom.min.js"></script>
-    <script src="//www.w3cschool.cn/statics/assets/react/babel.min.js"></script>-->
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <style>
+        html,body{
+            margin:0;
+            width:100%;
+            height:100%;
+            overflow: hidden;
+            background: black;
+            cursor: pointer;
+			background: linear-gradient(to bottom, #000000 0%, #5788fe 100%);
+        }
+        .filter {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fe5757;
+            animation: colorChange 30s ease-in-out infinite;
+            animation-fill-mode: both;
+            mix-blend-mode: overlay;
+        }
+        @keyframes colorChange {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: .9;
+            }
+        }
+        .landscape {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+			background: url('http://www.jq22.com/css/img/xkbg.png')center bottom repeat-x;
+			background-size: 1000px 250px;
+        }
+        .text{
+            font-size: 5em;
+            font-style: inherit;
+            color:aliceblue;
+            width:100%;
+            position: absolute;
+            top:50%;
+            text-align: center;
+            margin-top:-1.5em;
+            opacity: 0.4;
+        }
+        </style>
 </head>
 <body>
-        <div id="templatemo_top_wrapper">
-            <div id="templatemo_top">
-                <ul id="social_box">
-                    <li><a href="#"><img src="images/facebook.png" alt="facebook" /></a></li>
-                    <li><a href="#"><img src="images/twitter.png" alt="twitter" /></a></li>
-                    <li><a href="#"><img src="images/linkedin.png" alt="linkin" /></a></li>
-                    <li><a href="#"><img src="images/technorati.png" alt="technorati" /></a></li>
-                    <li><a href="#"><img src="images/myspace.png" alt="myspace" /></a></li>                
-                </ul>
-            </div>
-        </div>
-        
-        <div id="templatemo_header_wrapper">
-            <div id="templatemo_header">
-            
-                <div id="site_title">
-                    <h1><a href="index.html"><img src="images/templatemo_logo.png" alt="logo" /><span>展示自我 乐于分享 ———— 李青伟</span></a></h1>
-                </div> <!-- end of site_title -->
-                
-            </div>
-        </div> <!-- end of templatemo_header -->
-        
-        <div id="templatemo_menu_wrapper">
-            <div id="templatemo_menu">
-                <ul>
-                    <li><a href="index.html" class="current">首页</a></li>
-                    <li><a href="about.html">关于</a></li>
-                    <li><a href="#myDesign">创作</a></li>
-                    <li><a href="contact.html">联系我</a></li>
-                </ul>    	
-            </div> <!-- end of templatemo_menu -->
-        </div>
-        
-        <div id="templatemo_middle_wrapper_outer">
-        <div id="templatemo_middle_wrapper_inner">
-            <div id="templatemo_middle_top"></div>
-            <div id="templatemo_middle">
-            
-                <div id="templatemo_content">
-                    
-                    <div id="templatemo_slider">
-                        <div id="featuredslideshow">
-                            <ul> 
-                                <li><img width="600" height="300" alt="photo one" src="images/slideshow/01.jpg" /></li> 
-                                <li><img width="600" height="300" alt="photo two" src="images/slideshow/02.jpg" /></li> 
-                                <li><img width="600" height="300" alt="photo three" src="images/slideshow/03.jpg" /></li> 
-                                <li><img width="600" height="300" alt="photo four" src="images/slideshow/04.jpg" /></li> 
-                                <li><img width="600" height="300" alt="photo five" src="images/slideshow/05.jpg" /></li> 
-                                <!-- eccetera --> 
-                            </ul> 
-                        </div>
-                        <script type="text/javascript">
-                             $("div#featuredslideshow").slideViewerPro({ 
-                            thumbs: 4,  
-                            thumbsPercentReduction: 15, 
-                            galBorderWidth: 0, 
-                            galBorderColor: "#666", 
-                            thumbsTopMargin: 10, 
-                            thumbsRightMargin: 10, 
-                            thumbsBorderWidth: 1, 
-                            thumbsActiveBorderColor: "#000", 
-                            thumbsActiveBorderOpacity: 0.8, 
-                            thumbsBorderOpacity: 0, 
-                            buttonsTextColor: "#707070", 
-                            autoslide: true,  
-                            typo: true 
-                            });  	
-                        </script>
-                    </div>
-                     
-                    <div class="cleaner"></div>
-        
-                    <div class="post_box">
-                
-                        <h2><a href="blog_post.html">免费css模板</a></h2>
-        
-                        <div class="post_meta"><strong>日期:</strong> 2018 | <strong>作者:</strong> 李青伟 |</div>
-                        <a href="#"><img src="images/templatemo_image_01.jpg" alt="image" /></a>
-                        <p><em>还愁找不到好的CSS模板么，还等什么，赶快来这里,在这里，只有你想不到的，没有你找不到的，前端工程师的必备</em></p>
-                        <p>为您的个人或商业网站提供高品质的<a href="http://www.cssmoban.com/">免费CSS模板</a>、 <a href="http://www.brusheezy.com/brush/1327-Midnight-City-Vector-Brushes" target="_blank">矢量画笔</a> 、 <a href="http://jwloh.deviantart.com/art/Aquaticus-Social-91014249" target="_blank">各类图标</a> 、<a href="http://www.gcmingati.net/wordpress/wp-content/lab/jquery/svwt/" target="_blank">JavaScript的滑块</a> .  绝对自由的下载，修改和应用为您的网站，没有任何限制。 </p>
-                            
-                      <div class="cleaner_h20"></div>
-                        <div class="category"><strong>分类: </strong><a href="#">图标</a>, <a href="#">CSS 模板</a></div> <div class="btn_more float_r"><a href="#">更多 <span>&raquo;</span></a></div>
-                        <div class="cleaner"></div>
-            
-                    </div>
-                    
-                       <div class="post_box post_box_last">
-                    
-                        <h2><a href="blog_post.html">网页设计和开发理念</a></h2>
-        
-                       <div class="post_meta"><strong>Date:</strong> 2018 | <strong>作者:</strong> 李青伟 | </div>
-                       <a href="#"><img src="images/templatemo_image_02.jpg" alt="image" /></a>
-                        
-                      <p>一个设计精良的网站，不仅能够带来视觉上的体验，还能够发掘潜在的网络客户，所以我们应该重视网页制作。网站建设涉及的技术繁多，而且各种技术日新月异，常常让初学者感到茫然，而很多网站建设人员仅关注于某一个知识点，没有全面从网站建设的生命周期的角度来了解网站建设必需的各种技术，导致很多网站建设人员缺乏全局意识，没有综合的网站建设能力。来这里，为你打下坚实的基础。</p>
-                      <p> <a href="http://www.sj33.cn/digital/wysj/">网页设计</a> </p>
-                      <p> <a href="http://www.hwsem.com/hw/tgrj/201817534.html">开发理念</a> .</p>
-                            
-                        <div class="cleaner_h20"></div>
-                        <div class="category"><strong>分类: </strong><a href="#">页面设计</a>, <a href="#">用户界面</a></div> <div class="btn_more float_r"><a href="#">更多 <span>&raquo;</span></a></div>
-                        <div class="cleaner"></div>
-            
-                    </div>
-                
-                </div> <!-- end of content -->
-                
-                <div id="templatmeo_sidebar">
-                
-                    <div class="sidebar_box">
-                        <ul class="ads_125">
-                            <li><a href="#"><img src="images/templatemo_ads.jpg" alt="CSS Templates" /></a></li>
-                            <li class="odd"><a href="#"><img src="images/templatemo_ads.jpg" alt="banner" /></a></li>
-                            <li class="last_row"><a href="http://www.cssmoban.com/"><img src="images/templatemo_ads.jpg" alt="banner" /></a></li>
-                            <li class="odd last_row"><a href="#"><img src="images/templatemo_ads.jpg" alt="banner" /></a></li>
-                        </ul>  
-                        <div class="cleaner"></div>
-                    </div>              
-                    
-                    <div class="sidebar_box">
-                        <h4>类别</h4>
-                        <ul class="tmo_list">
-                                <li><a href="index.html">扁平化设计</a></li>
-                                <li><a href="index.html">极简风格</a></li>
-                                <li><a href="index.html">3D风格</a></li>
-                                <li><a href="index.html">无边框风格</a></li>
-                                <li><a href="index.html">插画风格</a></li>
-                                <li><a href="index.html">黑板风格</a></li>
-                                <li><a href="index.html">纵向分割</a></li>
-                                <li><a href="index.html">超级头版</a></li>
-                                <li><a href="index.html">照片与白字搭配</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="sidebar_box" id="myDesign">
-                        <h4>最近设计</h4>
-                        <div class="recent_comment_box">
-                            <a href="3DHeart.html">3DHeart</a>
-                            <p>div+css来实现你的旋转小爱心<br> <a href="#" rel="nofollow"><strong>HTML code</strong></a> &amp; <a href="#" rel="nofollow"><strong>CSS code</strong></a>.</p>
-                        </div>
-                        
-                        <div class="recent_comment_box">
-                            <a href="canvasgame.html">canvas小游戏 </a>
-                            <p>闲暇时光来一波 <br><a href="#" rel="nofollow"><strong>HTML code</strong></a> &amp; <a href="#" rel="nofollow"><strong>CSS code</strong></a>.</p>
-                      </div>
-                        
-                        <div class="recent_comment_box">
-                            <a href="3Dphotos.html">3D相册</a>
-                            <p> 把你喜欢的photos做成自己喜欢的相册吧<br> <a href="#" rel="nofollow"><strong>HTML code</strong></a> &amp; <a href="#" rel="nofollow"><strong>CSS code</strong></a>.</p>
-                        </div>
-                        
-                        <div class="recent_comment_box">
-                            <a href="#">jQuery动画</a>
-                            <p>感受一下吧.</p>
-                        </div>
-                        
-                    </div>
-                    <div class="cleaner"></div>
-                
-                </div>
-               
-                <div class="cleaner"></div>
-            </div> <!-- end of templatemo_middle -->
-            <div id="templatemo_middle_bottom"></div>
-        
-            <div id="templatemo_footer">
-            
-                <div class="col_w310">
-                    <h4>页面导航</h4>
-                    <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="about.html">关于</a></li>
-                        <li><a href="#myDesign">设计</a></li>
-                        <li><a href="contact.html" class="last">联系我</a></li>
-                    </ul>  
-         
-                </div>
-                
-                <div class="col_w310">
-                    <h4>资源集锦</h4>
-                    <ul>
-                        <li><a href="http://www.cssmoban.com/">CSS模板</a></li>
-                        <li><a href="http://www.brusheezy.com/brush/1327-Midnight-City-Vector-Brushes">矢量画笔</a></li>
-                        <li><a href="http://jwloh.deviantart.com/art/Aquaticus-Social-91014249">各类图标</a></li>
-                        <li><a href="http://www.sj33.cn/digital/wysj/">网页设计</a></li>
-                    </ul>    
-         
-                </div>
-                
-                <div class="col_w310">
-                    <h4>寄语</h4>
-                    <p>感谢大家能访问我的博客，希望大家能在这里学到更多知识，找到更多自己想要的资源，也可以<a href="contact.html">联系我</a></p>
-                    <div class="btn_more"><a href="about.html">更多 <span>&raquo;</span></a></div>
-         
-                </div>
-                
-                
-                <div class="cleaner"></div>
-            </div> <!-- end of footer -->
-            
-        </div>
-        </div>
-        
-        <div id="templatemo_copyright_wrapper">
-            <div id="templatemo_copyright">
-            
-                Copyright © 2018 <a href="#">李青伟</a> - 
-                更多 <a href="http://js.itivy.com" target="_parent" title="网页素材">网页素材</a>
-                
-            </div>
-        </div>
-        
+	<div class="landscape">woshilandscape</div>
+    <div class="filter">woshifilter</div>
+    <div class="text" onclick="toblog();">Welcome To lqwblog</div>
+    <canvas id="canvas">我是canvas</canvas>
+	
+<script>
+   
+    
+    function Round_item(index,x,y){
+        this.index=index;
+        this.x=x;
+        this.y=y;
+        var r;
+        this.r=Math.random()*2+1;
+        var alpha=(Math.floor(Math.random()*10)+1)/10/2;
+        this.color="rgba(255,255,255,"+alpha+")";
+    }
+
+    Round_item.prototype.draw=function(){
+        context.fillStyle=this.color;
+        context.shadowBlur=this.r*2;
+        context.beginPath();
+        context.arc(this.x,this.y,this.r,0,2 * Math.PI,false);
+        context.closePath();
+        context.fill();
+    }
+    
+    Round_item.prototype.move=function(){
+        this.y-=.25;
+        if(this.y<=0){
+            this.y=HEIGHT+10;
+        }
+        this.draw();
+    }
+
+    function Dot(id,x,y,r){
+        this.id=id;
+        this.x=x;
+        this.y=y;
+        this.r=Math.floor(Math.random()*5)+1;
+        this.maxLinks=2;
+        this.speed=.5;
+        this.a=.5;
+        this.aReduction = .005;
+        this.color = "rgba(255,255,255," + this.a + ")";
+        this.linkColor = "rgba(255,255,255," + this.a / 4 + ")";
+        this.dir = Math.floor(Math.random() * 140) + 200;
+    }
+
+    Dot.prototype.draw=function(){
+        context.fillStyle=this.color;
+        context.shadowBlur=this.r*2;
+        context.beginPath();
+        context.arc(this.x,this.y,this.r,0,2*Math.PI,false);
+        context.closePath();
+        context.fill();
+    }
+
+    Dot.prototype.link=function(){
+        if(this.id==0)return;
+        var previousDot1 = getPreviousDot(this.id, 1);
+        var previousDot2 = getPreviousDot(this.id, 2);
+        var previousDot3 = getPreviousDot(this.id, 3);
+        if(!previousDot1)return;
+        context.strokeStyle=this.linkColor;
+        context.moveTo(previousDot1.x,previousDot1.y);
+        context.beginPath();
+        context.lineTo(this.x,this.y);
+        if (previousDot2 != false) context.lineTo(previousDot2.x, previousDot2.y);
+        if (previousDot3 != false) context.lineTo(previousDot3.x, previousDot3.y);
+        context.stroke();
+        context.closePath();
+    }
+
+    function getPreviousDot(id,stepback){
+        if(id==0||id-stepback<0) return false;
+        if(typeof dots[id-stepback]!="undefined") return dots[id-stepback];
+        else return false;
+    }
+
+    Dot.prototype.move=function(){
+        this.a-=this.aReduction;
+        if(this.a<=0){
+            this.die();
+        }
+        this.color = "rgba(255,255,255," + this.a + ")";
+        this.linkColor = "rgba(255,255,255," + this.a / 4 + ")";
+        this.x = this.x + Math.cos(degToRad(this.dir)) * this.speed,
+        this.y = this.y + Math.sin(degToRad(this.dir)) * this.speed;
+        this.draw();
+        this.link();
+    }
+
+    Dot.prototype.die=function(){
+        dots[this.id] = null;
+        delete dots[this.id];
+    }
+	
+	 var canvas=document.getElementById("canvas");
+    var context=canvas.getContext("2d");
+    var WIDTH,HEIGHT;
+    var initRoundPopulation=100;
+    var round=[];
+    var dots=[];
+    var mouseMoving=false;
+    var mouseMoveChecker,mouseX,MouseY;
+    var dotsMinDist=2,maxDistFromCursor = 50;
+
+    setCanvasSize();
+    init();
+
+    function setCanvasSize(){
+        WIDTH=document.documentElement.clientWidth;
+        HEIGHT=document.documentElement.clientHeight;
+        canvas.setAttribute("width",WIDTH);
+        canvas.setAttribute("height",HEIGHT);
+    }
+
+    function animate(){
+        context.clearRect(0,0,WIDTH,HEIGHT);
+        for(var i in round){
+           round[i].move();
+           //console.log(i+","+round[i]+"\n");
+        }
+        for(var i in dots){
+            dots[i].move();
+        }
+        drawIfMouseMoving();
+        requestAnimationFrame(animate);
+    }
+
+    function drawIfMouseMoving(){
+        if(!mouseMoving) return;
+        if(dots.length==0){
+            dots[0]=new Dot(0,mouseX,mouseY);
+            dots[0].draw();
+            return;
+        }
+        var previousDot = getPreviousDot(dots.length, 1);
+        var prevX = previousDot.x;
+        var prevY = previousDot.y;
+        var diffX = Math.abs(prevX - mouseX);
+        var diffY = Math.abs(prevY - mouseY);
+        if (diffX < dotsMinDist || diffY < dotsMinDist) return;
+        var xVariation = Math.random() > .5 ? -1 : 1;
+        xVariation = xVariation * Math.floor(Math.random() * maxDistFromCursor) + 1;
+        var yVariation = Math.random() > .5 ? -1 : 1;
+        yVariation = yVariation * Math.floor(Math.random() * maxDistFromCursor) + 1;
+        dots[dots.length] = new Dot(dots.length, mouseX + xVariation, mouseY + yVariation);
+        dots[dots.length - 1].draw();
+        dots[dots.length - 1].link();        
+    }
+
+    function degToRad(deg) {
+        return deg * (Math.PI / 180);
+    }
+
+    function init(){
+        context.strokeStyle="white";
+        context.shadowColor="white";
+        for(var i=0;i<initRoundPopulation;i++){
+            round[i]=new Round_item(i,Math.random()*WIDTH,Math.random()*HEIGHT);
+            //round[i].draw();
+        }
+        context.shadowBlur=0;
+        animate();
+    }
+
+    window.onmousemove = function (e) {
+        mouseMoving = true;
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        clearInterval(mouseMoveChecker);
+        mouseMoveChecker = setTimeout(function () {
+            mouseMoving = false;
+        }, 100);
+    }
+
+    function toblog(){
+        window.location.href='./src/index.html';
+    }	
+</script>
 </body>
 </html>

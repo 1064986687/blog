@@ -45,8 +45,8 @@ jQuery.fn.slideViewerPro = function(settings) {
 			thumbsPercentReduction: 12,
 			thumbsVis: true,
 			easeFunc: "easeInOutExpo",
-			leftButtonInner: "<img src='images/larw.gif' alt='left' />", //could be an image "<img src='images/larw.gif' />" or an escaped char as "&larr";
-			rightButtonInner: "<img src='images/rarw.gif' alt='right' />", //could be an image or an escaped char as "&rarr";
+			leftButtonInner: "<img src='../images/larw.gif' alt='left' />", //could be an image "<img src='images/larw.gif' />" or an escaped char as "&larr";
+			rightButtonInner: "<img src='../images/rarw.gif' alt='right' />", //could be an image or an escaped char as "&rarr";
 			autoslide: false,
 			typo: false,
 			typoFullOpacity: 0.9,
